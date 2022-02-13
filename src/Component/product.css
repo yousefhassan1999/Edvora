@@ -1,5 +1,5 @@
 .ProductShow{
-    width: 100%;
+    width: 107.5%;
     display: flex;
     flex-direction: column;
     margin: 15px 0;
@@ -11,7 +11,7 @@
 }
 .showBox{
     background: #131313;
-    min-width: 300px;
+    width: 100%;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
@@ -21,14 +21,16 @@
 }
 .corssal div:first-child button:first-child{
     position: absolute;
-    left:-60px;
+    right:-45px;
     background: transparent;
     color: #FFFFFF;
     font-size: 30px;
+    z-index: 100;
+
 }
 .corssal div:first-child button:last-child{
     position: absolute;
-    right:-60px;
+    right:-80px;
     background: transparent;
     color: #FFFFFF;
     font-size: 30px;
@@ -38,4 +40,7 @@
 }
 .corssal .rec-slider-container{
     margin: 0;
+}
+.corssal .rec-item-wrapper{
+    max-width: 300px;
 }

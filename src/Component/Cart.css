@@ -2,6 +2,7 @@
   margin: 15px 0px  15px  15px;
   background: #232323;
   width: 300px;
+  height: 200px;
   border-radius: 4.69px;
   -webkit-border-radius: 4.69px;
   -moz-border-radius: 4.69px;
@@ -39,6 +40,7 @@
   grid-area: img;
 }
 .imgcontainer img {
+  width:130px ;
   border-radius: 5px;
   width: inherit;
   height: inherit;
@@ -90,9 +92,12 @@
   word-wrap: break-word;
 }
 .productdate p,
-.productdescription p {
-  width: 100%;
+.productname p,
+.productprice p,
+.productlocation p{
+  max-width: 15ch;
 }
 .productdescription {
+  width: 100%;
   grid-area: description;
 }

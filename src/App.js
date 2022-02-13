@@ -26,17 +26,17 @@ class App extends Component {
         products: res.data,
         groupByCategory: groupby("product_name", res.data),
       });
-      console.log(this.state.products);
-      console.log(this.state.groupByCategory);
+      // console.log(this.state.products);
+      // console.log(this.state.groupByCategory);
     });
   };
 
   render() {
     const { groupByCategory } = this.state;
-    const theProduct = Object.keys(groupByCategory).map((cat ) => {
+    const theProduct = Object.keys(groupByCategory).map((cat) => {
       return (
         <div className="BodyContainer" key={cat}>
-          <Product productCatShow={groupByCategory[cat]}/>
+          <Product productCatShow={groupByCategory[cat]} />
         </div>
       );
     });
@@ -54,7 +54,7 @@ class App extends Component {
             <div className="productstitle">
               <span>Products</span>
             </div>
-            {theProduct}
+            <div className="product_scroll">{theProduct}</div>
           </div>
         </div>
         {/* </div> */}
