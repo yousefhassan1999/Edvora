@@ -1,0 +1,41 @@
+.ProductShow{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+.productsCont span{
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 23px;
+}
+.showBox{
+    background: #131313;
+    min-width: 300px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    position: relative;
+}
+.corssal div:first-child button:first-child{
+    position: absolute;
+    left:-60px;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+.corssal div:first-child button:last-child{
+    position: absolute;
+    right:-60px;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+.corssal .rec-pagination{
+    display: none;
+}
+.corssal .rec-slider-container{
+    margin: 0;
+}

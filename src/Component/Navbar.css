@@ -1,0 +1,18 @@
+.NavBar {
+  width: 100%;
+}
+.Headercont {
+  padding: 5px;
+}
+.Headercont h1 {
+  font-size: 20px;
+  line-height: 100%;
+  margin: 0;
+}
+hr{
+    background: #CBCBCB;
+    margin-bottom: 15px;
+}
+.FilterBody{
+    padding: 15px 0;
+}
