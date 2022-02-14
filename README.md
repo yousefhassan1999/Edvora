@@ -1,2 +1,2 @@
 URL of GitHub Repository.
-https://yousefhassan1999.github.io/Edvora/
+https://github.com/yousefhassan1999/Edvora.git
