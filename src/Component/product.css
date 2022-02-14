@@ -1,46 +1,56 @@
-.ProductShow{
-    width: 107.5%;
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
+.ProductShow {
+  width: 107.5%;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
 }
-.productsCont span{
-    color: #FFFFFF;
-    font-size: 20px;
-    line-height: 23px;
+@media (max-width: 768px) {
+    .ProductShow {
+        width: 95%;
+    }
 }
-.showBox{
-    background: #131313;
-    width: 100%;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    position: relative;
+.productsCont span {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 23px;
 }
-.corssal div:first-child button:first-child{
-    position: absolute;
-    right:-45px;
-    background: transparent;
-    color: #FFFFFF;
-    font-size: 30px;
-    z-index: 100;
-
+.showBox {
+  background: #131313;
+  width: 100%;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  position: relative;
 }
-.corssal div:first-child button:last-child{
-    position: absolute;
-    right:-80px;
-    background: transparent;
-    color: #FFFFFF;
-    font-size: 30px;
+.corssal div:first-child button:first-child {
+  position: absolute;
+  right: -45px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 30px;
+  z-index: 100;
 }
-.corssal .rec-pagination{
-    display: none;
+@media (max-width: 768px) {
+    .corssal div:first-child button:last-child,
+    .corssal div:first-child button:first-child{
+        display: none;
+    }
+  }
+.corssal div:first-child button:last-child {
+  position: absolute;
+  right: -80px;
+  background: transparent;
+  color: #ffffff;
+  font-size: 30px;
 }
-.corssal .rec-slider-container{
-    margin: 0;
+.corssal .rec-pagination {
+  display: none;
 }
-.corssal .rec-item-wrapper{
-    max-width: 300px;
+.corssal .rec-slider-container {
+  margin: 0;
+}
+.corssal .rec-item-wrapper {
+  max-width: 300px;
 }

@@ -10,24 +10,34 @@ const breakPoints = [
 ];
 class Product extends Component {
   render() {
+    /** Get The Product List From Props. */
     const { productCatShow } = this.props;
+
+    /** Loop On Product List And Add Cart To Box */
     const Cartitems = productCatShow.map((product) => {
       return (
           <Cart key={product.time} data={product}/>
       );
     });
+
     return (
+      /** Start Products Showing */
       <div className="ProductShow">
+        {/*Start Product Box Container. */}
         <div className="productsCont">
           <span>{this.props.category}</span>
           <hr></hr>
+          {/*Start Product Category Box Container. */}
           <div className="showBox">
             <Carousel className="corssal" breakPoints={breakPoints}>
               {Cartitems}
             </Carousel>
           </div>
+          {/*End Product Category Box Container. */}
         </div>
+        {/*End Product Box Container. */}
       </div>
+      /** End Products Showing */
     );
   }
 }

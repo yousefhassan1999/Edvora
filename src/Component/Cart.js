@@ -3,8 +3,10 @@ import "./Cart.css";
 
 class Cart extends Component {
   render() {
+    /** Get Product Item From Props . */
     const {data}=this.props;
     return (
+      /** Start Cart Product */
       <div className="CartBox">
         <div className="product">
           <div className="imgcontainer">
@@ -21,6 +23,7 @@ class Cart extends Component {
           <div className="productdescription"><p> {data.discription} </p></div>
         </div>
       </div>
+       /** End Cart Product */
     );
   }
 }
