@@ -5,6 +5,7 @@ import Navbar from "./Component/Navbar";
 import Product from "./Component/Product";
 class App extends Component {
   state = {
+    prev_products:[],
     products: [],
     groupByCategory: {},
   };
@@ -23,29 +24,47 @@ class App extends Component {
           {}
         );
       this.setState({
+        prev_products:res.data,
         products: res.data,
         groupByCategory: groupby("product_name", res.data),
       });
-      // console.log(this.state.products);
-      // console.log(this.state.groupByCategory);
     });
   };
-
+  navbarhandler = (e) => {
+    if(e.length===0){
+      e=this.state.prev_products;
+    }
+    const groupbyFilter = (key, arr) =>
+        arr.reduce(
+          (cache, product) => ({
+            ...cache,
+            [product[key]]:
+              product[key] in cache
+                ? cache[product[key]].concat(product)
+                : [product],
+          }),
+          {}
+        );
+    this.setState({
+      products:e,
+      groupByCategory: groupbyFilter("product_name", e),
+    })
+  }
   render() {
     const { groupByCategory } = this.state;
     const theProduct = Object.keys(groupByCategory).map((cat) => {
       return (
         <div className="BodyContainer" key={cat}>
-          <Product productCatShow={groupByCategory[cat]} />
+          <Product category={cat} productCatShow={groupByCategory[cat]} />
         </div>
       );
     });
     return (
+      /*Start app*/ 
       <div className="App">
-        {/* <div className="container"> */}
         <div className="Content">
           <div className="NavBarContainer">
-            <Navbar />
+            <Navbar products={this.state.products} onclick={this.navbarhandler}/>
           </div>
           <div className="cont">
             <div className="headCont">
@@ -57,8 +76,8 @@ class App extends Component {
             <div className="product_scroll">{theProduct}</div>
           </div>
         </div>
-        {/* </div> */}
       </div>
+      /*End app*/
     );
   }
 }

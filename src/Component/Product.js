@@ -11,7 +11,6 @@ const breakPoints = [
 class Product extends Component {
   render() {
     const { productCatShow } = this.props;
-    console.log(productCatShow);
     const Cartitems = productCatShow.map((product) => {
       return (
           <Cart key={product.time} data={product}/>
@@ -20,7 +19,7 @@ class Product extends Component {
     return (
       <div className="ProductShow">
         <div className="productsCont">
-          <span>Product Name</span>
+          <span>{this.props.category}</span>
           <hr></hr>
           <div className="showBox">
             <Carousel className="corssal" breakPoints={breakPoints}>
